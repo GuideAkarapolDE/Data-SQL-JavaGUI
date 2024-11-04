@@ -173,7 +173,24 @@ public class Main extends javax.swing.JFrame {
         DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
         tblModel.setRowCount(0);
     }//GEN-LAST:event_ClearActionPerformed
+    private void AddActionPerformed(java.awt.event.ActionEvent evt) {                                    
+        String number = TextField.getText();
+        String country = TextField1.getText();
+        String capital = TextField2.getText();
+        String province = TextField3.getText();
+        String currency = TextField4.getText();
 
+        DefaultTableModel tblModel = (DefaultTableModel) jTable1.getModel();
+
+        tblModel.addRow(new Object[]{number, country, capital, province, currency});
+
+        TextField.setText("");
+        TextField1.setText("");
+        TextField2.setText("");
+        TextField3.setText("");
+        TextField4.setText("");
+
+    }                                   
     /**
      * @param args the command line arguments
      */
