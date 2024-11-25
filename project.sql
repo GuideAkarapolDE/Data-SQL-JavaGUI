@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 29, 2024 at 08:05 AM
+-- Generation Time: Nov 25, 2024 at 03:00 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,44 +24,40 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `countryinfo`
+-- Table structure for table `students`
 --
 
-CREATE TABLE `countryinfo` (
-  `NUMBER` int(11) NOT NULL,
-  `Country` varchar(100) DEFAULT NULL,
-  `Capital` varchar(100) DEFAULT NULL,
-  `Province` int(11) DEFAULT NULL,
-  `Currency` varchar(50) DEFAULT NULL
+CREATE TABLE `students` (
+  `ID` bigint(20) NOT NULL,
+  `Name` varchar(255) DEFAULT NULL,
+  `Major` varchar(255) DEFAULT NULL,
+  `Age` int(11) DEFAULT NULL,
+  `GPA` double DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
 
 --
--- Dumping data for table `countryinfo`
+-- Dumping data for table `students`
 --
 
-INSERT INTO `countryinfo` (`NUMBER`, `Country`, `Capital`, `Province`, `Currency`) VALUES
-(1, 'Thailand', 'Bangkok', 76, 'Baht'),
-(2, 'Myanmar', 'Naypyidaw', 21, 'Kyat'),
-(3, 'Malaysia', 'Kuala Lumpur', 13, 'Ringgit'),
-(4, 'Indonesia', 'Jakarta', 38, 'Rupiah'),
-(5, 'Philippines', 'Manila', 82, 'Peso'),
-(6, 'Singapore', 'Singapore', 5, 'Singapore dollar'),
-(7, 'Vietnam', 'Hanoi', 58, 'Dong'),
-(8, 'Laos', 'Vientiane', 17, 'Kip'),
-(9, 'Cambodia', 'Phnom Penh', 25, 'Riel'),
-(10, 'Brunei', 'Bandar Seri Begawan', 4, 'Brunei dollar');
+INSERT INTO `students` (`ID`, `Name`, `Major`, `Age`, `GPA`) VALUES
+(6652300150, 'Sakkachorn', 'CAI', 22, 3.5),
+(6652300275, 'Raweerot', 'CAI', 20, 3.1),
+(6652300320, 'Akarapol', 'CAI', 20, 3.35),
+(6652300419, 'Chulajakra', 'CAI', 20, 3.5),
+(6652300885, 'Makhawan', 'CAI', 20, 3.2);
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `countryinfo`
+-- Indexes for table `students`
 --
-ALTER TABLE `countryinfo`
-  ADD PRIMARY KEY (`NUMBER`);
+ALTER TABLE `students`
+  ADD PRIMARY KEY (`ID`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+
